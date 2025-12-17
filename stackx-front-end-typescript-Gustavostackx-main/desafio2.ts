@@ -1,28 +1,21 @@
-
 import { Equal, Expect, ExpectExtends } from "./types/validateTypes";
 
-// Seu código vai aqui :
-// Use a função TS Omit em IExtendedWithoutFields para fazer dele uma versão de  IExtendedUser que seja igual a  ISiblingsUser
-
-interface IExtendedUser { // Não mexa nessa interface
+interface IExtendedUser {
   siblings: number
   rating: number
   applications: string[]
 }
 
-interface ISiblingsUser { // Não mexa nessa interface
+interface ISiblingsUser {
   siblings: number
 }
 
-// Mexa aqui : 
-interface IExtendedWithoutFields extends IExtendedUser {}
-
-
-// Validações :
+// Uso correto do Omit diretamente na interface solicitada
+interface IExtendedWithoutFields
+  extends Omit<IExtendedUser, "rating" | "applications"> {}
 
 type casosDeValidacao = [
-
-  Expect<Equal<ISiblingsUser, IExtendedWithoutFields>>, //  compara IFullUser ao Extendes com suas exceções
-
+  Expect<Equal<ISiblingsUser, IExtendedWithoutFields>>,
 ]
+
 
