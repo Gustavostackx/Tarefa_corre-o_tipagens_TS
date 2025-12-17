@@ -1,6 +1,5 @@
 import { Equal, Expect, ExpectExtends } from "./types/validateTypes";
 
-// Modificação da tipagem para aceitar funções como duplicarNumero
 type myFunction = (value: number) => number
 
 type casosDeValidacao = [
