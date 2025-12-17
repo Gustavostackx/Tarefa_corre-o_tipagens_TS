@@ -1,6 +1,5 @@
 import { Expect, ExpectExtends } from "./types/validateTypes";
 
-// IFullUser agora herda os campos de IUserWorker e IUserStudent
 interface IFullUser extends IUserWorker, IUserStudent {
 }
 
