@@ -1,7 +1,5 @@
-
 import { Equal, Expect, ExpectExtends } from "./types/validateTypes";
 
-// Tipagem ajustada para aceitar todos os atributos usados em userYouMade
 interface IUserYouMade {
   name: string
   age: number
