@@ -1,6 +1,5 @@
 import { Equal, Expect, ExpectExtends } from "./types/validateTypes";
 
-// Ajuste da tipagem para permitir valores numéricos e de texto
 type listType = number | string
 
 const list_of_packs: listType[] = []
